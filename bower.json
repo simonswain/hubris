@@ -4,10 +4,11 @@
   "authors": [
     "Simon Swain <simon@simonswain.com>"
   ],
-  "description": "Webapp CSS framework",
+  "description": "Webapp CSS scaffolding",
+  "homepage": "https://github.com/simonswain/hubris",
   "main": [
     "dist/css/app.css",
-    "less/app.css",
+    "less/app.css"
   ],
   "keywords": [
     "css",
