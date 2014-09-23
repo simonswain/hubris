@@ -1,0 +1,26 @@
+{
+  "name": "hubris",
+  "version": "0.0.0",
+  "authors": [
+    "Simon Swain <simon@simonswain.com>"
+  ],
+  "description": "Webapp CSS framework",
+  "main": [
+    "dist/css/app.css",
+    "less/app.css",
+  ],
+  "keywords": [
+    "css",
+    "less",
+    "webapp",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
