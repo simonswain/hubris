@@ -1,14 +1,14 @@
 {
   "name": "hubris",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Simon Swain <simon@simonswain.com>"
   ],
   "description": "Webapp CSS scaffolding",
   "homepage": "https://github.com/simonswain/hubris",
   "main": [
-    "dist/css/app.css",
-    "less/app.css"
+    "dist/css/style.min.css",
+    "less/style.less"
   ],
   "keywords": [
     "css",
@@ -23,5 +23,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "underscore": "~1.7.0",
+    "backbone": "~1.1.2"
+  }
 }
