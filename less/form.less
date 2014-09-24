@@ -1,0 +1,77 @@
+button {
+    background: #fff;
+    border: none;
+    padding: 10px;
+}
+
+input[type=submit], 
+input[type=button] {
+    background: #fff;
+    border: none;
+    padding: 10px;
+}
+
+button[type=submit],
+input[type=submit] {
+    width: 100%;
+    padding: 8px;
+    background: #69c;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12pt;
+    &:hover {
+        background: #7ad;
+        cursor: pointer;
+    }
+}
+
+input[type=text], 
+input[type=password], 
+input[type=email] {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+ 
+textarea {
+    border-top: 1px solid #abadb3;
+    border-right: 1px solid #dbdfe6;
+    border-bottom: 1px solid #e3e9ef;
+    border-left: 1px solid #e3e9ef;
+    padding: 6px;
+}
+
+select {
+    padding: 9px;
+    border: none;
+    background: #fff;
+}
+
+.form {
+    padding: 32px 0;
+    form {
+        margin: 0;
+        padding: 0;
+
+        input[type=text] {
+            width: 100%;
+        }
+
+        input[type=submit] {
+            width: 100%;
+        }
+
+    }
+
+    table {
+        width: 100%;
+        td {
+            font-size: 10pt;
+            padding: 4px;
+            &:first-child {
+                width: 128px;
+            }
+        }
+    }
+}

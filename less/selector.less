@@ -1,0 +1,76 @@
+.selector {
+    background: #ddd;
+    color: #000;
+    height: 56px;
+
+    table {
+        width: 100%;
+    }
+
+
+    button {
+        border-radius: 3px;
+        cursor: pointer;
+        background: #eee;
+        color: #666;
+        &:hover {
+            color: #000;
+            background: #fff;
+        }
+    }
+
+    input[type=text] {
+        background: #eee;
+        border-radius: 3px;
+        &:focus {
+            background: #fff;
+        }
+    }
+    
+    .pager {       
+        position: absolute;
+        top: 8px;
+        left: 240px;
+        
+        select {
+            width: 80px;
+            margin: 1px;
+        }
+
+        .count {
+            width: 128px;
+            padding-top: 12px;
+            text-align: center;
+        }
+    }
+
+    .exporter {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        button {
+            cursor: pointer;
+        }
+    }
+
+    .deleter {
+        position: absolute;
+        top: 8px;
+        left: 160px;
+        button {
+            cursor: pointer;
+        }
+    }
+
+    .filter {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        
+        input[type=text] {
+            width: 120px;
+        }
+    }
+
+
+}
