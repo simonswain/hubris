@@ -1,3 +1,71 @@
+.actions {
+  margin: 0;
+  background: #aaa;
+  color: #000;
+  height: 56px;
+  padding: 8px;
+}
+.actions .switch {
+  float: left;
+}
+.actions a.back {
+  display: block;
+  width: 160px;
+  height: 40px;
+  padding: 12px;
+  font-size: 10pt;
+  background: #444;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+.actions a.back:hover {
+  text-decoration: underline;
+  background: #000;
+}
+.actions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: right;
+}
+.actions ul li {
+  display: block;
+  margin: 0 0 0 8px;
+  width: 148px;
+  float: left;
+}
+.actions ul li a {
+  display: block;
+  padding: 12px;
+  background: #aaa;
+  color: #000;
+  text-align: center;
+  font-size: 10pt;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.actions ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+.actions ul li a.create {
+  background: #369;
+  color: #fff;
+}
+.actions ul li a.create:hover {
+  background: #69c;
+}
+.actions ul li a.danger {
+  background: #900;
+  color: #fff;
+}
+.actions ul li a.danger:hover {
+  background: #c00;
+}
+
 #app {
   position: absolute;
   top: 0;
@@ -15,27 +83,30 @@
 }
 #app .tray {
   position: absolute;
-  top: 0;
+  top: 64px;
   left: 0;
   bottom: 0;
   width: 64px;
   background: #222;
 }
-#app .main {
+#app .view {
   position: absolute;
   top: 64px;
   left: 0;
   bottom: 0;
   right: 0;
 }
-#app .main .panel {
+#app .view.has-tray {
+  left: 64px;
+}
+#app .view .panel {
   width: 640px;
   margin: 64px auto;
   padding: 32px;
   background: #fff;
 }
-#app .main .panel button,
-#app .main .panel input {
+#app .view .panel button,
+#app .view .panel input {
   width: 100%;
 }
 
@@ -337,6 +408,7 @@ p {
   border-bottom: 1px solid #555;
 }
 .tray ul li a {
+  position: relative;
   font-size: 10pt;
   display: block;
   width: 64px;
@@ -349,6 +421,17 @@ p {
   color: #fff;
 }
 .tray ul li a .active {
-  background: #000;
-  color: #fff;
+  background: #eee;
+  color: #444;
+}
+.tray ul li a i {
+  font-size: 2em;
+  margin-top: 12px;
+}
+.tray ul li a span {
+  font-size: 8pt;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
 }
