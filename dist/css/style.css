@@ -110,6 +110,14 @@
   width: 100%;
 }
 
+.content {
+  width: 800px;
+  margin: 32px auto;
+  padding: 32px;
+  background: #eee;
+  height: 600px;
+}
+
 .dataset {
   position: relative;
 }
@@ -143,15 +151,6 @@
 .dataset table td a {
   font-weight: bold;
   text-decoration: none;
-}
-
-.default {
-  width: 800px;
-  margin: 32px auto;
-  padding: 32px;
-  text-align: center;
-  background: #eee;
-  height: 600px;
 }
 
 button {
@@ -376,19 +375,19 @@ body {
 }
 h1 {
   font-size: 16pt;
-  margin: 0;
+  margin: 0.66em 0;
 }
 h2 {
   font-size: 14pt;
-  margin: 0;
+  margin: 0.66em 0;
 }
 h3 {
   font-size: 12pt;
-  margin: 0;
+  margin: 0.66em 0;
 }
 h4 {
   font-size: 10pt;
-  margin: 0;
+  margin: 0.66em 0;
 }
 p {
   margin: 0;
