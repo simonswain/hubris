@@ -105,9 +105,13 @@
   padding: 32px;
   background: #fff;
 }
-#app .view .panel button,
-#app .view .panel input {
-  width: 100%;
+
+.content {
+  width: 800px;
+  margin: 32px auto;
+  padding: 32px;
+  background: #eee;
+  height: 600px;
 }
 
 .dataset {
@@ -125,10 +129,20 @@
   color: #666;
   text-align: left;
   border-bottom: 1px solid #ddd;
-  padding: 8px;
+  padding: 10px;
 }
 .dataset table td.check,
 .dataset table th.check {
+  width: 32px;
+  text-align: center;
+}
+.dataset table td.dragger,
+.dataset table th.dragger {
+  width: 32px;
+  text-align: center;
+}
+.dataset table td.deleter,
+.dataset table th.deleter {
   width: 32px;
   text-align: center;
 }
@@ -137,27 +151,28 @@
   text-align: right;
 }
 
-button {
-  background: #fff;
-  border: none;
-  padding: 10px;
-}
+button,
 input[type=submit],
 input[type=button] {
-  background: #fff;
+  width: 100%;
+  padding: 12px 8px;
   border: none;
-  padding: 10px;
+  border-radius: 4px;
+  font-size: 12pt;
+  color: #555;
+  background: #bbb;
+  cursor: pointer;
+}
+button:hover,
+input[type=submit]:hover,
+input[type=button]:hover {
+  background: #aaa;
+  color: #222;
 }
 button[type=submit],
 input[type=submit] {
-  width: 100%;
-  padding: 8px;
-  background: #69c;
-  border: none;
-  border-radius: 4px;
   color: #fff;
-  font-weight: bold;
-  font-size: 12pt;
+  background: #69c;
 }
 button[type=submit]:hover,
 input[type=submit]:hover {
@@ -182,18 +197,46 @@ select {
   border: none;
   background: #fff;
 }
-.form {
-  padding: 8px;
-}
 .form form {
   margin: 0;
   padding: 0;
 }
-.form form input[type=text] {
+.form form > div {
+  padding: 4px 0;
+}
+.form form > div > label {
+  color: #999;
+  padding-left: 2px;
+}
+.form input[type=text],
+.form input[type=password],
+.form input[type=email] {
   width: 100%;
 }
-.form form input[type=submit] {
+.form input[type=submit] {
   width: 100%;
+}
+.form ul.multi {
+  list-style: none;
+  margin: 8px 0;
+  padding: 0;
+}
+.form ul.multi li {
+  margin: 0;
+  padding: 4px;
+  line-height: 150%;
+}
+.form ul.multi li input[type=radio],
+.form ul.multi li input[type=checkbox] {
+  margin-right: 8px;
+}
+.form div.invalid p {
+  color: #c00;
+}
+.form div.invalid input[type=text],
+.form div.invalid input[type=password],
+.form div.invalid input[type=email] {
+  border: 1px solid rgba(204, 0, 0, 0.25);
 }
 .form table {
   width: 100%;
@@ -204,6 +247,16 @@ select {
 }
 .form table td:first-child {
   width: 128px;
+}
+
+.center {
+  text-align: center;
+}
+.space-before {
+  margin-top: 1.3em;
+}
+.space-after {
+  margin-bottom: 1.3;
 }
 
 
@@ -273,13 +326,66 @@ select {
   color: #369;
 }
 
+.panel {
+  position: relative;
+}
+.panel h3 {
+  text-align: center;
+}
+.panel .flash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+.panel .flash > div {
+  padding: 32px;
+  text-align: center;
+}
 
 .selector {
   background: #aaa;
   height: 56px;
+  position: relative;
 }
-.selector table {
-  width: 100%;
+.selector ul.switch {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 10pt;
+}
+.selector ul.switch.views {
+  left: 80px;
+}
+.selector ul.switch.views li {
+  margin: 0 16px 0 0;
+}
+.selector ul.switch.views li:last-child {
+  margin: 0;
+}
+.selector ul.switch li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.selector ul.switch li a {
+  display: block;
+  width: 128px;
+  padding: 12px;
+  color: #fff;
+  background: #666;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+.selector ul.switch li a:hover {
+  background: #fff;
+  color: #369;
 }
 .selector button {
   border-radius: 3px;
@@ -297,36 +403,6 @@ select {
 }
 .selector input[type=text]:focus {
   background: #fff;
-}
-.selector .pager {
-  position: absolute;
-  top: 8px;
-  left: 240px;
-}
-.selector .pager select {
-  width: 80px;
-  margin: 1px;
-}
-.selector .pager .count {
-  width: 128px;
-  padding-top: 12px;
-  text-align: center;
-}
-.selector .exporter {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-}
-.selector .exporter button {
-  cursor: pointer;
-}
-.selector .deleter {
-  position: absolute;
-  top: 8px;
-  left: 160px;
-}
-.selector .deleter button {
-  cursor: pointer;
 }
 .selector .filter {
   position: absolute;
@@ -349,7 +425,7 @@ body {
   padding: 0;
   font-family: arial, sans-serif;
   font-size: 10pt;
-  background: #ccc;
+  background: #eee;
 }
 html {
   overflow-y: scroll;
@@ -373,8 +449,20 @@ h4 {
   font-size: 10pt;
   margin: 0.66em 0;
 }
+h1:firsrt-child,
+h2:firsrt-child,
+h3:firsrt-child,
+h4:firsrt-child {
+  margin-top: 0;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child {
+  margin-top: 0;
+}
 p {
-  margin: 0;
+  margin: 0.66em 0;
 }
 a {
   color: #444;

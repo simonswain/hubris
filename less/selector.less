@@ -1,9 +1,46 @@
 .selector {
     background: #aaa;
     height: 56px;
+    position: relative;
 
-    table {
-        width: 100%;
+    ul.switch {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        font-size: 10pt;
+
+        &.views {
+            left: 80px;
+            li {
+                margin: 0 16px 0 0;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            a {
+                display: block;
+                width: 128px;
+                padding: 12px;
+                color: #fff;
+                background: #666;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: center;
+                &:hover {
+                    background: #fff;
+                    color: #369;
+                }
+            }
+        }
     }
 
 
@@ -26,41 +63,6 @@
         }
     }
     
-    .pager {       
-        position: absolute;
-        top: 8px;
-        left: 240px;
-        
-        select {
-            width: 80px;
-            margin: 1px;
-        }
-
-        .count {
-            width: 128px;
-            padding-top: 12px;
-            text-align: center;
-        }
-    }
-
-    .exporter {
-        position: absolute;
-        top: 8px;
-        left: 8px;
-        button {
-            cursor: pointer;
-        }
-    }
-
-    .deleter {
-        position: absolute;
-        top: 8px;
-        left: 160px;
-        button {
-            cursor: pointer;
-        }
-    }
-
     .filter {
         position: absolute;
         top: 8px;
