@@ -2,8 +2,8 @@
   margin: 0;
   background: #999;
   color: #000;
-  height: 56px;
-  padding: 8px;
+  height: 64px;
+  padding: 12px;
 }
 .actions .switch {
   float: left;
@@ -108,10 +108,27 @@
 
 .content {
   width: 800px;
-  margin: 32px auto;
+  margin: 64px auto;
   padding: 32px;
-  background: #eee;
-  height: 600px;
+  background: #fff;
+  min-height: 480px;
+}
+.content h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #69c;
+}
+.content h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: normal;
+  color: #666;
+}
+.content h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  color: #888;
 }
 
 .dataset {
@@ -149,6 +166,14 @@
 .dataset table td.numeric,
 .dataset table th.numeric {
   text-align: right;
+}
+
+.empty {
+  position: relative;
+  font-size: 140%;
+  text-align: center;
+  color: #999;
+  padding: 64px 0;
 }
 
 button,
@@ -347,7 +372,7 @@ select {
 
 .selector {
   background: #aaa;
-  height: 56px;
+  height: 64px;
   position: relative;
 }
 .selector ul.switch {
@@ -355,8 +380,8 @@ select {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 12px;
+  left: 12px;
   font-size: 10pt;
 }
 .selector ul.switch.views {
