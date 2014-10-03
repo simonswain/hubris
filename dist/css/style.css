@@ -243,7 +243,7 @@ select {
 }
 .form ul.multi {
   list-style: none;
-  margin: 8px 0;
+  margin: 0;
   padding: 0;
 }
 .form ul.multi li {
@@ -308,24 +308,25 @@ select {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 12px;
+  top: 0;
+  bottom: 0;
   font-size: 10pt;
 }
 .nav ul.views {
-  left: 80px;
+  left: 64px;
 }
 .nav ul.views li {
-  margin: 0 16px 0 0;
+  margin: 0;
 }
 .nav ul.views li:last-child {
   margin: 0;
 }
 .nav ul.session {
-  right: 12px;
+  right: 0;
   text-align: right;
 }
 .nav ul.session li {
-  margin: 0 0 0 16px;
+  margin: 0;
 }
 .nav ul.session li:first-child {
   margin: 0;
@@ -338,17 +339,19 @@ select {
 .nav ul li a {
   display: block;
   width: 128px;
-  padding: 12px;
-  color: #fff;
-  border-radius: 4px;
-  background: #444;
+  height: 64px;
+  padding: 24px;
+  color: #ccc;
+  background: #222;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
+  border-left: 1px solid #444;
+  border-right: 1px solid #666;
 }
 .nav ul li a:hover {
-  background: #fff;
-  color: #369;
+  background: #333;
+  color: #fff;
 }
 
 .panel {
@@ -375,13 +378,16 @@ select {
   height: 64px;
   position: relative;
 }
+.selector .option {
+  display: inline-block;
+  float: left;
+  margin: 12px;
+}
 .selector ul.switch {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 12px;
-  left: 12px;
+  float: left;
   font-size: 10pt;
 }
 .selector ul.switch.views {
@@ -436,6 +442,11 @@ select {
 }
 .selector .filter input[type=text] {
   width: 120px;
+}
+.selector .filter button {
+  width: 32px;
+  padding: 9px;
+  margin-left: 4px;
 }
 
 *,
