@@ -1,0 +1,42 @@
+.tabs {
+    color: #fff;
+    background: #444;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 10pt;
+        display: inline-block;
+        
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            a {
+                display: block;
+                width: 128px;
+                height: 64px;
+                padding: 24px;
+                color: #ccc;
+                background: #444;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: center;
+                border-right: 1px solid #666;
+                &:hover {
+                    background: #333;
+                    color: #fff;
+                }
+            }
+            
+        }
+
+        li:first-child a {
+            border-left: 1px solid #666;
+        }
+
+    }
+
+}
