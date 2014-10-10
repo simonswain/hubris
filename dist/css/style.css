@@ -89,6 +89,16 @@
   width: 64px;
   background: #222;
 }
+#app .tabs {
+  position: absolute;
+  top: 64px;
+  left: 64px;
+  right: 0;
+  height: 64px;
+}
+#app .tabs.has-tray {
+  left: 64px;
+}
 #app .view {
   position: absolute;
   top: 64px;
@@ -98,6 +108,9 @@
 }
 #app .view.has-tray {
   left: 64px;
+}
+#app .view.has-tabs {
+  top: 128px;
 }
 #app .view .panel {
   width: 640px;
@@ -203,6 +216,14 @@ button[type=submit]:hover,
 input[type=submit]:hover {
   background: #7ad;
   cursor: pointer;
+}
+button[type=submit].btn-danger,
+input[type=submit].btn-danger {
+  background: #922;
+}
+button[type=submit].btn-danger:hover,
+input[type=submit].btn-danger:hover {
+  background: #c00;
 }
 input[type=text],
 input[type=password],
@@ -502,6 +523,43 @@ p {
 }
 a {
   color: #444;
+}
+
+.tabs {
+  color: #fff;
+  background: #444;
+  text-align: center;
+}
+.tabs ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 10pt;
+  display: inline-block;
+}
+.tabs ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.tabs ul li a {
+  display: block;
+  width: 128px;
+  height: 64px;
+  padding: 24px;
+  color: #ccc;
+  background: #444;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  border-right: 1px solid #666;
+}
+.tabs ul li a:hover {
+  background: #333;
+  color: #fff;
+}
+.tabs ul li:first-child a {
+  border-left: 1px solid #666;
 }
 
 .tray {

@@ -23,6 +23,17 @@
         background: #222;
     }
 
+    .tabs {
+        position: absolute;
+        top: 64px;
+        left: 64px;
+        right: 0;
+        height: 64px;
+        &.has-tray {
+            left: 64px;
+        }
+    }
+
     .view {
         position: absolute;
         top: 64px;
@@ -32,6 +43,10 @@
 
         &.has-tray {
             left: 64px;
+        }
+
+        &.has-tabs {
+            top: 128px;
         }
 
         .panel {
