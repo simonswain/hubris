@@ -588,9 +588,8 @@ a {
   background: #444;
   color: #fff;
 }
-.tray ul li a .active {
-  background: #eee;
-  color: #444;
+.tray ul li a.active {
+  color: #fff;
 }
 .tray ul li a i {
   font-size: 2em;
