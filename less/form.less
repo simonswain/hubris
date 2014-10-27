@@ -24,15 +24,25 @@ input[type=submit] {
         cursor: pointer;
     }
 
+}
+
+
+button {
     &.btn-danger {
+        color: #fff;
         background: #922;
         &:hover {
             background: #c00;
         }
     }
-
 }
 
+button {
+    &.btn-small {
+        padding: 6px;
+        font-size: 10pt;
+    }
+}
 
 
 input[type=text], 
@@ -41,7 +51,7 @@ input[type=email] {
     padding: 10px;
     border: 1px solid #ddd;
 }
- 
+
 textarea {
     border-top: 1px solid #abadb3;
     border-right: 1px solid #dbdfe6;
