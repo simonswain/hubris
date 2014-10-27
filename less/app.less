@@ -49,11 +49,26 @@
             top: 128px;
         }
 
-        .panel {
+        // keep to a useful width
+        .content {
             width: 640px;
-            margin: 64px auto;
+            margin: 32px auto;
             padding: 32px;
-            background: #fff;
+
+            &>h1:first-child {
+                margin-top: 0;
+            }
+
+            // put a background on it
+            &.panel {
+                background: #fff;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+
         }
 
 

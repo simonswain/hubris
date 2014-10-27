@@ -9,7 +9,7 @@
   float: left;
 }
 .actions a.back {
-  display: block;
+  display: inline-block;
   width: 160px;
   height: 40px;
   padding: 12px;
@@ -28,7 +28,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: block;
+  display: inline-block;
   float: right;
 }
 .actions ul li {
@@ -112,37 +112,21 @@
 #app .view.has-tabs {
   top: 128px;
 }
-#app .view .panel {
+#app .view .content {
   width: 640px;
-  margin: 64px auto;
+  margin: 32px auto;
   padding: 32px;
+}
+#app .view .content > h1:first-child {
+  margin-top: 0;
+}
+#app .view .content.panel {
   background: #fff;
+}
+#app .view .content h1 {
+  text-align: center;
 }
 
-.content {
-  width: 800px;
-  margin: 64px auto;
-  padding: 32px;
-  background: #fff;
-  min-height: 480px;
-}
-.content h1 {
-  text-align: center;
-  font-size: 48px;
-  color: #69c;
-}
-.content h2 {
-  text-align: center;
-  font-size: 36px;
-  font-weight: normal;
-  color: #666;
-}
-.content h3 {
-  text-align: center;
-  font-size: 24px;
-  font-weight: normal;
-  color: #888;
-}
 
 .dataset {
   position: relative;
@@ -183,10 +167,9 @@
 
 .empty {
   position: relative;
-  font-size: 140%;
   text-align: center;
-  color: #999;
-  padding: 64px 0;
+  color: #888;
+  font-size: 120%;
 }
 
 button,
@@ -284,6 +267,9 @@ select {
 .form div.invalid input[type=email] {
   border: 1px solid rgba(204, 0, 0, 0.5);
   outline-color: rgba(204, 0, 0, 0.5);
+}
+.form div.invalid ul.multi {
+  border: 1px solid rgba(204, 0, 0, 0.5);
 }
 .form table {
   width: 100%;
@@ -494,18 +480,22 @@ body {
 h1 {
   font-size: 16pt;
   margin: 0.66em 0;
+  color: #888;
 }
 h2 {
   font-size: 14pt;
   margin: 0.66em 0;
+  color: #888;
 }
 h3 {
   font-size: 12pt;
   margin: 0.66em 0;
+  color: #666;
 }
 h4 {
   font-size: 10pt;
   margin: 0.66em 0;
+  color: #888;
 }
 h1:firsrt-child,
 h2:firsrt-child,
