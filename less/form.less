@@ -1,47 +1,41 @@
-button,
-input[type=submit], 
-input[type=button] {
+button {
     width: 100%;
     padding: 12px 8px;
     border: none;
     border-radius: 4px;
     font-size: 12pt;
-    color: #555;
-    background: #bbb;
+    color: #fff;
+    background: #999;
     cursor: pointer;
+
     &:hover {
+        cursor: pointer;
         background: #aaa;
         color: #222;
     }
-}
 
-button[type=submit],
-input[type=submit] {
-    color: #fff;
-    background: #69c;
-    &:hover {
-        background: #7ad;
-        cursor: pointer;
+    &[type=submit],
+    &.btn-primary {
+        color: #fff;
+        background: #69c;
+        &:hover {
+            background: #369;
+        }
     }
 
-}
-
-
-button {
     &.btn-danger {
         color: #fff;
-        background: #922;
+        background: #900;
         &:hover {
             background: #c00;
         }
     }
-}
 
-button {
     &.btn-small {
         padding: 6px;
         font-size: 10pt;
     }
+
 }
 
 
@@ -109,6 +103,11 @@ select {
     }
 
     div.invalid {
+
+        table {
+            border: 1px solid rgba(204, 0, 0, 0.5);
+        }
+
         p {
             color: #c00;
         }
@@ -126,14 +125,4 @@ select {
 
     }
 
-    table {
-        width: 100%;
-        td {
-            font-size: 10pt;
-            padding: 4px;
-            &:first-child {
-                width: 128px;
-            }
-        }
-    }
 }
