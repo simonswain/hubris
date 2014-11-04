@@ -6,8 +6,7 @@ CSS scaffolding for web apps.
 
 Open `demo/index.html`
 
-This is a simple backbone app that shows Hubris in action.
-
+This is a set of static pages that show Hubris in action and detail how to use it.
 
 # Usage
 
