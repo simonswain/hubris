@@ -17,7 +17,7 @@ The source also has a copy of the demo at `demo/index.html`
 bower install hubris
 ```
 
-The file you want to use us:
+The file you want to use is:
 
 ```
 dist/style.min.css
