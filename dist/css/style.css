@@ -136,18 +136,35 @@
 #app .view.has-tabs {
   top: 128px;
 }
+#app .view .empty {
+  max-width: 640px;
+  margin: 32px auto;
+  padding: 32px;
+  text-align: center;
+  color: #888;
+  font-size: 140%;
+}
 #app .view .content {
-  width: 640px;
+  max-width: 640px;
   margin: 32px auto;
   padding: 32px;
 }
 #app .view .content > h1:first-child {
   margin-top: 0;
 }
-#app .view .content.panel {
-  background: #fff;
-}
 #app .view .content h1 {
+  text-align: center;
+}
+#app .view .panel {
+  max-width: 640px;
+  background: #fff;
+  margin: 32px auto;
+  padding: 32px;
+}
+#app .view .panel > h1:first-child {
+  margin-top: 0;
+}
+#app .view .panel h1 {
   text-align: center;
 }
 
@@ -189,12 +206,6 @@
   text-align: right;
 }
 
-.empty {
-  position: relative;
-  text-align: center;
-  color: #888;
-  font-size: 120%;
-}
 
 button {
   width: 100%;

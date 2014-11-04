@@ -49,9 +49,18 @@
             top: 128px;
         }
 
+        .empty {
+            max-width: 640px;
+            margin: 32px auto;
+            padding: 32px;
+            text-align: center;
+            color: #888;
+            font-size: 140%;
+        }
+
         // keep to a useful width
         .content {
-            width: 640px;
+            max-width: 640px;
             margin: 32px auto;
             padding: 32px;
 
@@ -59,16 +68,25 @@
                 margin-top: 0;
             }
 
-            // put a background on it
-            &.panel {
-                background: #fff;
+            h1 {
+                text-align: center;
+            }
+        }
+
+        // put a background on it
+        .panel {
+            max-width: 640px;
+            background: #fff;
+            margin: 32px auto;
+            padding: 32px;
+
+            &>h1:first-child {
+                margin-top: 0;
             }
 
             h1 {
                 text-align: center;
             }
-
-
         }
 
 
