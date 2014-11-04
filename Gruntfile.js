@@ -20,10 +20,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    copy: {
+      main: {
+        files: [{
+          src: ["dist/css/style.min.css"], dest: "demo/style.min.css"
+        }]
+      },
+    },
     watch: {
       styles: {
         files: ['less/**/*.less'], // which files to watch
-        tasks: ['less'],
+        tasks: ['less','copy'],
         options: {
           nospawn: true
         }
@@ -34,6 +41,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('dist', ['clean','less']);
 
