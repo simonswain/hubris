@@ -34,7 +34,7 @@ grunt watch
 ```
 
 The start editing the files in `less/`. When you save, changes will be
-rendered in to `dist/style.css` and `dist/style.min.css'.
+rendered in to `dist/style.css` and `dist/style.min.css`.
 
 
 # Release History
