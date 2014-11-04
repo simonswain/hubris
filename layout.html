@@ -22,26 +22,157 @@
       </header>
       <div class="view">
 
-        <div class="content panel">
+        <div class="panel">
           <h1>Layout</h1>
 
-<pre><code>
-&lt;div id="app"&gt;
-  &lt;header&gt;
-  &lt;/header&gt;
- 
+<p>The only HTML you need in the body of your doc one of these structure variations.</p>
+
+<p>The structure you use may change depending on the state of your app or user.</p>
+
+<p>Header and Tray are optional. Likely you will not use tray for an anonymous user, enabling it when logged in. Header content may change depending on login state. Tabs are generally used for switching within a set of related views.</p>
+
+<h3>Default</h3>
+
+<p>An empty view with no navigation</p>
+
+<pre><code>&lt;div id="app"&gt;
   &lt;div class="view"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
+<h3>Header</h3>
+
+<p>Header contains your branding and top level navigation</p>
+
+<pre><code>&lt;div id="app"&gt;
+  &lt;header&gt;
+  &lt;/header&gt;
+  &lt;div class="view"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Tray</h3>
+
+<p>Tray is a vertical sidebar on the left. It can be used as primary or secondary navigation</p>
+
+<pre><code>&lt;div id="app"&gt;
+  &lt;tray&gt;
+  &lt;/tray&gt;
+  &lt;div class="view has-tray"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Tabs</h3>
+
+<p>Tabs provide for secondary navigation</p>
+
+<pre><code>&lt;div id="app"&gt;
+  &lt;header&gt;
+  &lt;/header&gt;
+  &lt;tabs&gt;
+  &lt;/tabs&gt;
+  &lt;div class="view has-tabs"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+<h3>Header and Tray</h3>
+
+<p>Header allows room on the left for Tray</p>
+
+<pre><code>&lt;div id="app"&gt;
+  &lt;header&gt;
+  &lt;/header&gt;
+  &lt;tray&gt;
+  &lt;/tray&gt;
+  &lt;div class="view has-tray"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Header, tabs and Tray</h3>
+
+<p>Header allows room on the left for Tray</p>
+
+<pre><code>&lt;div id="app"&gt;
+  &lt;header&gt;
+  &lt;/header&gt;
+  &lt;tray&gt;
+  &lt;/tray&gt;
+  &lt;tabs&gt;
+  &lt;/tabs&gt;
+  &lt;div class="view has-tray has-tabs"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+<h1>Header</h1>
+
+a.k.a Nav.
+
+<p>The ul.session in the header is for things related to a signed in user</p>
+
+
+<h1>Tray</h1>
+
+<h1>Tabs</h1>
+
+<h1>View</h1>
+
 <p>Most of your rendering will go in <code>.view</code></p>
 
-<p><code>.content</code> provides a fixed width container. <code>.panel</code> adds a white background.<p>
+<p><code>.view</code> is a absolute positioned div that fills the screen, minus room for the header, tabs and tray if required (that's what <code>.has-tray</code> does).</p>
 
-<pre><code>
-&lt;div class="view"&gt;
-  &lt;div class="content panel"&gt;
+<p><code>.content</code> provides a fixed width container. <code>.panel</code> provised fixed width and white background.<p>
+
+<h3>Content</h3>
+
+<pre><code>&lt;div class="view"&gt;
+  &lt;div class="content"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Panel</h3>
+
+<pre><code>&lt;div class="view"&gt;
+  &lt;div class="panel"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Empty</h3>
+
+<pre><code>&lt;div class="view"&gt;
+  &lt;div class="empty"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Dataset</h3>
+
+<pre><code>&lt;div class="view"&gt;
+  &lt;div class="actions"&gt;
+  &lt;/div&gt;
+  &lt;div class="selector"&gt;
+  &lt;/div&gt;
+  &lt;div class="dataset"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+<h3>Form</h3>
+
+<pre><code>&lt;div class="view"&gt;
+  &lt;div class="actions"&gt;
+  &lt;/div&gt;
+  &lt;div class="form"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
