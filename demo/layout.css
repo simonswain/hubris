@@ -1,0 +1,61 @@
+hr {
+    clear: both;
+    margin: 32px;
+    background: #ccc;
+    height: 1px;
+    border: 0;
+}
+
+.screen {
+    float: right;
+    width: 160px;
+    height: 120px;
+    background: #69c;
+    position: relative;
+}
+
+
+.screen-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: #000;
+}
+
+.screen-header-has-tray {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 0;
+    height: 16px;
+    background: #000;
+}
+
+.screen-tray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 16px;
+    background: #333;
+}
+
+.screen-tabs {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: #333;
+}
+
+.screen-tabs-has-tray {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 0;
+    height: 16px;
+    background: #666;
+}

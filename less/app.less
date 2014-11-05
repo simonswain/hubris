@@ -5,6 +5,14 @@
     bottom: 0;
     right: 0;
 
+    .full {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
     .nav {
         position: absolute;
         top: 0;
@@ -36,10 +44,16 @@
 
     .view {
         position: absolute;
-        top: 64px;
-        left: 0;
-        bottom: 0;
+        top: 64px; 
         right: 0;
+        bottom: 0;
+        left: 0;
+
+        overflow-y: hidden;
+
+        &.view-scroll {
+            overflow-y: scroll;
+        }
 
         &.has-tray {
             left: 64px;
