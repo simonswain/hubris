@@ -1,0 +1,64 @@
+.dashboard {
+
+    .widget {
+        width: 320px;
+        height: 128px;
+        background: #fff;
+        margin: 8px;
+        display: inline-block;
+        float: left;
+        position: relative;
+        box-shadow: 0 0 2px #ddd;
+
+        .icon {
+            position: absolute;
+            top: 32px;
+            left: 32px;
+            width: 64px;
+            height: 64px;
+            background: #ddd;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 24pt;
+            padding-top: 16px;
+            
+            &.green {
+                background: #090;
+            }
+
+            &.red {
+                background: #900;
+            }
+
+            &.blue {
+                background: #69c;
+            }
+
+            &.orange {
+                background: #fc0;
+            }
+
+        }
+
+        .value {
+            position: absolute;
+            top: 16px;
+            left: 128px;
+            right: 0;
+            font-size: 36pt;
+            font-weight: bold;
+        }
+
+        h3 {
+            position: absolute;
+            top: 64px;
+            left: 128px;
+            right: 0;
+            text-align: left;
+        }
+
+
+    }
+
+}

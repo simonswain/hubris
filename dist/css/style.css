@@ -180,6 +180,57 @@
 }
 
 
+.dashboard .widget {
+  width: 320px;
+  height: 128px;
+  background: #fff;
+  margin: 8px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  box-shadow: 0 0 2px #ddd;
+}
+.dashboard .widget .icon {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 64px;
+  height: 64px;
+  background: #ddd;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24pt;
+  padding-top: 16px;
+}
+.dashboard .widget .icon.green {
+  background: #090;
+}
+.dashboard .widget .icon.red {
+  background: #900;
+}
+.dashboard .widget .icon.blue {
+  background: #69c;
+}
+.dashboard .widget .icon.orange {
+  background: #fc0;
+}
+.dashboard .widget .value {
+  position: absolute;
+  top: 16px;
+  left: 128px;
+  right: 0;
+  font-size: 36pt;
+  font-weight: bold;
+}
+.dashboard .widget h3 {
+  position: absolute;
+  top: 64px;
+  left: 128px;
+  right: 0;
+  text-align: left;
+}
+
 .dataset {
   position: relative;
 }
@@ -196,6 +247,12 @@
   text-align: left;
   border-bottom: 1px solid #ddd;
   padding: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .dataset table td.check,
 .dataset table th.check {
@@ -215,6 +272,10 @@
 .dataset table td.numeric,
 .dataset table th.numeric {
   text-align: right;
+}
+.dataset table td.disabled,
+.dataset table th.disabled {
+  color: #aaa;
 }
 
 
@@ -441,6 +502,16 @@ select {
 }
 .panel .flash > div {
   padding: 32px;
+  text-align: center;
+}
+
+.report {
+  margin: 16px;
+  padding: 16px;
+  background: #fff;
+}
+.report h1 {
+  margin: 16px;
   text-align: center;
 }
 

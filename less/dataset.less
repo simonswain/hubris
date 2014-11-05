@@ -14,21 +14,37 @@
             text-align: left; 
             border-bottom: 1px solid #ddd;
             padding: 10px;
-            &.check {
+ 
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+           &.check {
                 width: 32px;
                 text-align: center;
             }
+
             &.dragger {
                 width: 32px;
                 text-align: center;
             }
+
             &.deleter {
                 width: 32px;
                 text-align: center;
             }
+
             &.numeric {
                 text-align: right;
             }
+
+            &.disabled {
+                color: #aaa;
+            }
+
         }
 
     }
