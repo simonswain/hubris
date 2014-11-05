@@ -12,168 +12,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Hubris</title>
     <link rel="stylesheet" href="style.min.css" />
+    <link rel="stylesheet" href="layout.css" />
   </head>
 
   <body>
     <div id="app">
       <header class="nav">
-        <ul><li><a href="index.html">Hubris</a></li><li><a href="layout.html">Layout</a></li><li><a href="styles.html">Styles</a></li><li><a href="dataset.html">Dataset</a></li><li><a href="form.html">Form</a></li></ul>
+        <ul><li><a href="index.html">Hubris</a></li><li><a href="layout.html">Layout</a></li><li><a href="views.html">Views</a></li><li><a href="styles.html">Styles</a></li><li><a href="dataset.html">Dataset</a></li><li><a href="form.html">Form</a></li></ul>
         <ul class="session"><li><a href="https://github.com/simonswain/hubris">Github</a></li></ul>
       </header>
-      <div class="view">
+      <div class="view view-scroll">
 
         <div class="panel">
           <h1>Layout</h1>
 
-<p>The only HTML you need in the body of your doc one of these structure variations.</p>
+<p>The layout structure you use may change depending on the state of your app or user.</p>
 
-<p>The structure you use may change depending on the state of your app or user.</p>
+<p>The only HTML you need in the body of your doc is one of the structure variations below.</p>
 
-<p>Header and Tray are optional. Likely you will not use tray for an anonymous user, enabling it when logged in. Header content may change depending on login state. Tabs are generally used for switching within a set of related views.</p>
+<p>Header and Tray are optional. Likely you will not use tray for an anonymous user, enabling it when logged in.</p>
 
-<h3>Default</h3>
+<p>Header content may change depending on login state. Tabs are generally used for switching within a set of related views.</p>
+
+<hr/>
+
+<h3>Fullscreen</h3>
+
+<div class="screen"></div>
 
 <p>An empty view with no navigation</p>
 
 <pre><code>&lt;div id="app"&gt;
-  &lt;div class="view"&gt;
+  &lt;div class="full"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<h3>Header</h3>
+<p>View fills the entire browser window, with room for navigation when needed.</p>
+
+<hr/>
+
+<h3>View + Header</h3>
+
+<div class="screen">
+<div class="screen-header"></div>
+</div>
 
 <p>Header contains your branding and top level navigation</p>
 
 <pre><code>&lt;div id="app"&gt;
-  &lt;header&gt;
+  &lt;header class="nav"&gt;
   &lt;/header&gt;
   &lt;div class="view"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<h3>Tray</h3>
+<hr/>
+
+<h3>View + Tray</h3>
+
+<div class="screen">
+<div class="screen-tray"></div>
+</div>
 
 <p>Tray is a vertical sidebar on the left. It can be used as primary or secondary navigation</p>
 
 <pre><code>&lt;div id="app"&gt;
-  &lt;tray&gt;
-  &lt;/tray&gt;
+  &lt;div class="tray"&gt;
+  &lt;/div&gt;
   &lt;div class="view has-tray"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<h3>Tabs</h3>
+<hr/>
 
-<p>Tabs provide for secondary navigation</p>
+<h3>View + Header + Tabs</h3>
+
+<div class="screen">
+<div class="screen-header"></div>
+<div class="screen-tabs"></div>
+</div>
+
+<p>Tabs provide secondary navigation for whatever is in your <code>.view</code></p>
 
 <pre><code>&lt;div id="app"&gt;
-  &lt;header&gt;
+  &lt;header class="nav"&gt;
   &lt;/header&gt;
-  &lt;tabs&gt;
-  &lt;/tabs&gt;
+  &lt;div class="tabs"&gt;
+  &lt;/div&gt;
   &lt;div class="view has-tabs"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
 
-<h3>Header and Tray</h3>
+<hr/>
+
+<h3>View + Header + Tray</h3>
+
+<div class="screen">
+<div class="screen-header-has-tray"></div>
+<div class="screen-tray"></div>
+</div>
 
 <p>Header allows room on the left for Tray</p>
 
 <pre><code>&lt;div id="app"&gt;
-  &lt;header&gt;
+  &lt;header class="nav"&gt;
   &lt;/header&gt;
-  &lt;tray&gt;
-  &lt;/tray&gt;
+  &lt;div class="tray"&gt;
+  &lt;/div&gt;
   &lt;div class="view has-tray"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<h3>Header, tabs and Tray</h3>
+<hr/>
 
+<h3>View + Header + Tabs + Tray</h3>
+
+
+<div class="screen">
+<div class="screen-header-has-tray"></div>
+<div class="screen-tabs-has-tray"></div>
+<div class="screen-tray"></div>
+</div>
 <p>Header allows room on the left for Tray</p>
 
 <pre><code>&lt;div id="app"&gt;
-  &lt;header&gt;
+  &lt;header class="nav"&gt;
   &lt;/header&gt;
-  &lt;tray&gt;
-  &lt;/tray&gt;
-  &lt;tabs&gt;
-  &lt;/tabs&gt;
+  &lt;div class="tray"&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs has-tray"&gt;
+  &lt;/div&gt;
   &lt;div class="view has-tray has-tabs"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
+<hr/>
 
-<h1>Header</h1>
-
-a.k.a Nav.
-
-<p>The ul.session in the header is for things related to a signed in user</p>
+<h1>Navigation</h1>
 
 
-<h1>Tray</h1>
+<p>Add <code>.active</code> to an <code>li</code> to indicate active state.</p>
 
-<h1>Tabs</h1>
+<h3>Header</h3>
 
-<h1>View</h1>
+<p>.top is the home button</p>
 
-<p>Most of your rendering will go in <code>.view</code></p>
+<p>Use a ul for your tabs</p>
 
-<p><code>.view</code> is a absolute positioned div that fills the screen, minus room for the header, tabs and tray if required (that's what <code>.has-tray</code> does).</p>
+<p>The ul.session in the is intended for things related to a signed in user.</p>
 
-<p><code>.content</code> provides a fixed width container. <code>.panel</code> provised fixed width and white background.<p>
+<pre><code>&lt;header class="nav"&gt;
+  &lt;a href="/" class="top"&gt;&lt;/a&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="/actions"&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class="session"&gt;
+    &lt;li&gt;
+      &lt;a href="/account"&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class="session"&gt;
+  &lt;/ul&gt;
+&lt;/header&gt;
+</code></pre>
 
-<h3>Content</h3>
+<hr/>
 
-<pre><code>&lt;div class="view"&gt;
-  &lt;div class="content"&gt;
-  &lt;/div&gt;
+<h3>Tray</h3>
+
+<pre><code>&lt;div class="tray"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="/widgets"&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="/controls"&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
 
-<h3>Panel</h3>
+<hr/>
 
-<pre><code>&lt;div class="view"&gt;
-  &lt;div class="panel"&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<h3>Tabs</h3>
 
-<h3>Empty</h3>
-
-<pre><code>&lt;div class="view"&gt;
-  &lt;div class="empty"&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<h3>Dataset</h3>
-
-<pre><code>&lt;div class="view"&gt;
-  &lt;div class="actions"&gt;
-  &lt;/div&gt;
-  &lt;div class="selector"&gt;
-  &lt;/div&gt;
-  &lt;div class="dataset"&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-
-<h3>Form</h3>
-
-<pre><code>&lt;div class="view"&gt;
-  &lt;div class="actions"&gt;
-  &lt;/div&gt;
-  &lt;div class="form"&gt;
-  &lt;/div&gt;
+<pre><code>&lt;div class="tabs"&gt;
+  &lt;a href="/" class="top"&gt;&lt;/a&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="/account"&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="/account/privacy"&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
 
