@@ -1,6 +1,6 @@
 .actions {
   margin: 0;
-  background: #999;
+  background: #ccc;
   color: #000;
   height: 64px;
   padding: 12px;
@@ -56,8 +56,8 @@
   color: #fff;
 }
 .actions ul li a.create:hover {
-  background: #fff;
-  color: #369;
+  background: #69c;
+  color: #fff;
 }
 .actions ul li a.danger {
   background: #900;
@@ -110,7 +110,7 @@
   left: 0;
   right: 0;
   height: 64px;
-  background: #222;
+  z-index: 1000;
 }
 #app .tray {
   position: absolute;
@@ -118,7 +118,6 @@
   left: 0;
   bottom: 0;
   width: 64px;
-  background: #222;
 }
 #app .tabs {
   position: absolute;
@@ -180,15 +179,28 @@
 }
 
 
+.dashboard {
+  overflow: auto;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
 .dashboard .widget {
   width: 320px;
   height: 128px;
   background: #fff;
-  margin: 8px;
+  margin: 16px 0 0 16px;
   display: inline-block;
   float: left;
   position: relative;
   box-shadow: 0 0 2px #ddd;
+}
+.dashboard .widget.widget-2-1 {
+  width: 656px;
+  height: 128px;
+}
+.dashboard .widget.widget-2-2 {
+  width: 656px;
+  height: 272px;
 }
 .dashboard .widget .icon {
   position: absolute;
@@ -196,50 +208,77 @@
   left: 32px;
   width: 64px;
   height: 64px;
-  background: #ddd;
+  background: #ccc;
   color: #fff;
   border-radius: 50%;
   text-align: center;
   font-size: 24pt;
   padding-top: 16px;
 }
-.dashboard .widget .icon.green {
-  background: #090;
+.dashboard .widget .icon.black {
+  background: #000;
+}
+.dashboard .widget .icon.white {
+  background: #fff;
 }
 .dashboard .widget .icon.red {
-  background: #900;
+  background: #c00;
+}
+.dashboard .widget .icon.green {
+  background: #090;
 }
 .dashboard .widget .icon.blue {
   background: #69c;
 }
-.dashboard .widget .icon.orange {
+.dashboard .widget .icon.yellow {
   background: #fc0;
+}
+.dashboard .widget .icon.orange {
+  background: #f90;
+}
+.dashboard .widget .icon.cyan {
+  background: #0cc;
+}
+.dashboard .widget .icon.magenta {
+  background: #909;
 }
 .dashboard .widget .value {
   position: absolute;
-  top: 16px;
-  left: 128px;
+  top: 24px;
+  left: 120px;
   right: 0;
   font-size: 36pt;
   font-weight: bold;
 }
+.dashboard .widget .value .unit {
+  margin-left: 8px;
+  font-size: 60%;
+}
+.dashboard .widget .value.small {
+  top: 32px;
+  font-size: 18pt;
+}
+.dashboard .widget .value.medium {
+  top: 32px;
+  font-size: 24pt;
+}
 .dashboard .widget h3 {
   position: absolute;
   top: 64px;
-  left: 128px;
+  left: 120px;
   right: 0;
   text-align: left;
 }
 
 .dataset {
   position: relative;
+  font-size: 11pt;
 }
 .dataset div.holder {
   height: 0;
 }
 .dataset table {
   width: 100%;
-  color: #444;
 }
 .dataset table td,
 .dataset table th {
@@ -247,12 +286,6 @@
   text-align: left;
   border-bottom: 1px solid #ddd;
   padding: 10px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 .dataset table td.check,
 .dataset table th.check {
@@ -422,7 +455,9 @@ select {
 
 
 .nav {
-  color: #fff;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .nav .top {
   margin: 0;
@@ -433,10 +468,7 @@ select {
   display: block;
   width: 64px;
   height: 64px;
-  background: #69c;
-}
-.nav .top:hover {
-  background: #369;
+  cursor: pointer;
 }
 .nav ul {
   list-style: none;
@@ -473,20 +505,17 @@ select {
 }
 .nav ul li a {
   display: block;
-  width: 128px;
+  width: 120px;
   height: 64px;
-  padding: 24px;
-  color: #ccc;
-  background: #222;
+  padding: 24px 4px;
+  color: #222;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  border-left: 1px solid #444;
-  border-right: 1px solid #666;
 }
 .nav ul li a:hover {
-  background: #333;
-  color: #fff;
+  background: #f6f6f6;
+  color: #000;
 }
 
 .panel {
@@ -516,13 +545,13 @@ select {
 }
 
 .selector {
-  background: #aaa;
+  background: #ddd;
   height: 64px;
   position: relative;
 }
 .selector .option {
   display: inline-block;
-  float: left;
+  float: right;
   margin: 12px;
 }
 .selector ul.switch {
@@ -559,7 +588,7 @@ select {
 .selector button {
   border-radius: 3px;
   cursor: pointer;
-  background: #eee;
+  background: rgba(255, 255, 255, 0.5);
   color: #666;
 }
 .selector button:hover {
@@ -567,7 +596,7 @@ select {
   background: #fff;
 }
 .selector input[type=text] {
-  background: #eee;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
 }
 .selector input[type=text]:focus {
@@ -576,10 +605,10 @@ select {
 .selector .filter {
   position: absolute;
   top: 12px;
-  right: 12px;
+  left: 12px;
 }
 .selector .filter input[type=text] {
-  width: 120px;
+  width: 240px;
 }
 .selector .filter button {
   width: 32px;
@@ -624,9 +653,10 @@ body {
   color: #444;
 }
 h1 {
-  font-size: 160%;
-  margin: 0.66em 0;
+  font-size: 240%;
+  margin: 0.66em 0 0 0;
   color: #888;
+  text-align: center;
 }
 h2 {
   font-size: 140%;
@@ -642,18 +672,6 @@ h4 {
   font-size: 100%;
   margin: 0.66em 0;
   color: #888;
-}
-h1:firsrt-child,
-h2:firsrt-child,
-h3:firsrt-child,
-h4:firsrt-child {
-  margin-top: 0;
-}
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child {
-  margin-top: 0;
 }
 p {
   margin: 0.66em 0;
