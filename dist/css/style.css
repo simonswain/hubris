@@ -446,6 +446,11 @@ select {
 .center {
   text-align: center;
 }
+.vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .space-before {
   margin-top: 1.3em;
 }
@@ -623,12 +628,15 @@ select {
   bottom: 0;
   right: 0;
   background: #69c;
+  background: linear-gradient(#6699cc, #336699);
   color: #fff;
   text-align: center;
   font-size: 160%;
   padding: 64px 32px;
+  height: 100%;
 }
 .splash h1 {
+  margin: 0;
   color: #fff;
 }
 
