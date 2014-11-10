@@ -464,6 +464,24 @@ select {
   color: #000;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
+.nav a {
+  color: #222;
+}
+.nav a:hover {
+  color: #000;
+  background: #f6f6f6;
+}
+.nav.nav-dark {
+  background: #222;
+  color: #fff;
+}
+.nav.nav-dark a {
+  color: #fff;
+}
+.nav.nav-dark a:hover {
+  color: #fff;
+  background: #444;
+}
 .nav .top {
   margin: 0;
   padding: 0;
@@ -513,14 +531,9 @@ select {
   width: 120px;
   height: 64px;
   padding: 24px 4px;
-  color: #222;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-}
-.nav ul li a:hover {
-  background: #f6f6f6;
-  color: #000;
 }
 
 .panel {
