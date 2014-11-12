@@ -68,7 +68,25 @@ long-form reading
 &lt;/div&gt;
 </code></pre>
 
+<h3>Wrap</h3>
+
+<p>
+A <code>.panel</code> with a <code>.sidebar</code>. Both constrained to fit a
+readable width (960px combined max) in the middle of the page.
+Intended for blog or info pages.
+</p>
+
+<pre><code>&lt;div class="view"&gt;
+  &lt;div class="panel"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
 <h3>Empty</h3>
+
+<p>
+For when there is no content to show, e.g no items in database.
+</p>
 
 <pre><code>&lt;div class="view"&gt;
   &lt;div class="empty"&gt;
@@ -78,7 +96,13 @@ long-form reading
 
 <h3>Dataset</h3>
 
-<p>Actions, Selector, Dataset</p>
+<p>
+For a dynamically updated subset of a
+collection. <code>.actions</code> perform tasks on the collection (eg
+create a record) and <code>.selector</code> filters the collection
+(expected to be sourced dynamically from server) to give the visible
+dataset.
+</p>
 
 <pre><code>&lt;div class="view"&gt;
   &lt;div class="actions"&gt;
@@ -93,7 +117,9 @@ long-form reading
 
 <h3>Form</h3>
 
-<p>Actions, Form</p>
+<p>
+<code>.form</code> ensures form elements within it are presented nicely.
+</p>
 
 <pre><code>&lt;div class="view"&gt;
   &lt;div class="actions"&gt;

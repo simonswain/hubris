@@ -688,7 +688,7 @@ select {
 }
 .sidebar ul li {
   margin: 0;
-  padding: 2px;
+  padding: 4px;
 }
 .sidebar ul li a {
   color: #666;
@@ -761,11 +761,23 @@ a {
   color: #444;
 }
 pre {
-  padding: 0;
+  padding: 4px;
   margin-top: 0;
   margin-bottom: 0;
   word-break: normal;
   line-height: 140%;
+  background: #ddd;
+  font-family: monospace;
+}
+pre code {
+  padding: 0;
+  margin: 0;
+}
+code {
+  font-family: monospace;
+  background: #ddd;
+  padding: 2px;
+  margin: 0;
 }
 
 .tabs {
