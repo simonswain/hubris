@@ -18,10 +18,15 @@
   <body>
     <div id="app">
       <header class="nav">
-        <ul><li><a href="index.html">Hubris</a></li><li><a href="layout.html">Layout</a></li><li><a href="views.html">Views</a></li><li><a href="styles.html">Styles</a></li><li><a href="dataset.html">Dataset</a></li><li><a href="form.html">Form</a></li></ul>
+        <ul><li><a href="index.html">Hubris</a></li><li><a href="layout.html">Layout</a></li><li><a href="views.html" class="active">Views</a></li><li><a href="styles.html">Styles</a></li><li><a href="docs.html">Docs</a></li></ul>
         <ul class="session"><li><a href="https://github.com/simonswain/hubris">Github</a></li></ul>
       </header>
-      <div class="view view-scroll">
+
+      <div class="tabs">
+        <ul><li><a href="splash.html">Splash</a></li><li><a href="content.html">Content</a></li><li><a href="panel.html">Panel</a></li><li><a href="wrap.html">Wrap</a></li><li><a href="empty.html">Empty</a></li><li><a href="dataset.html">Dataset</a></li><li><a href="form.html">Form</a></li><li><a href="dashboard.html">Dashboard</a></li></ul>
+      </div>
+
+      <div class="view has-tabs view-scroll">
 
         <div class="panel">
 
@@ -42,6 +47,12 @@
 </code></pre>
 
 <h3>Content</h3>
+
+<p>
+Full area of view is given a white background, some padding, and
+permitted to scroll. Intended to be flowed with text content for
+long-form reading
+</p>
 
 <pre><code>&lt;div class="view"&gt;
   &lt;div class="content"&gt;
