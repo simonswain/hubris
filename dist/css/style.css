@@ -129,6 +129,15 @@
 #app .tabs.has-tray {
   left: 64px;
 }
+#app .sidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 320px;
+  bottom: 0;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
 #app .view {
   position: absolute;
   top: 64px;
@@ -136,6 +145,11 @@
   bottom: 0;
   left: 0;
   overflow-y: hidden;
+}
+#app .view.content {
+  padding: 16px 32px;
+  background: #fff;
+  overflow-y: auto;
 }
 #app .view.view-scroll {
   overflow-y: scroll;
@@ -146,6 +160,9 @@
 #app .view.has-tabs {
   top: 128px;
 }
+#app .view.has-sidebar {
+  left: 320px;
+}
 #app .view .empty {
   max-width: 640px;
   margin: 32px auto;
@@ -154,16 +171,26 @@
   color: #888;
   font-size: 140%;
 }
-#app .view .content {
-  max-width: 640px;
+#app .view .wrap {
+  width: 960px;
   margin: 32px auto;
-  padding: 32px;
+  overflow: auto;
 }
-#app .view .content > h1:first-child {
-  margin-top: 0;
+#app .view .wrap .sidebar {
+  display: inline-block;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  float: left;
+  width: 312px;
+  box-shadow: none;
 }
-#app .view .content h1 {
-  text-align: center;
+#app .view .wrap .panel {
+  margin: 0;
+  display: inline-block;
+  float: right;
 }
 #app .view .panel {
   max-width: 640px;
@@ -198,6 +225,9 @@
   width: 656px;
   height: 128px;
 }
+.dashboard .widget.widget-1-2 {
+  height: 272px;
+}
 .dashboard .widget.widget-2-2 {
   width: 656px;
   height: 272px;
@@ -220,6 +250,7 @@
 }
 .dashboard .widget .icon.white {
   background: #fff;
+  color: #888;
 }
 .dashboard .widget .icon.red {
   background: #c00;
@@ -449,7 +480,7 @@ select {
 .vertical {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
 }
 .space-before {
   margin-top: 1.3em;
@@ -471,6 +502,10 @@ select {
   color: #000;
   background: #f6f6f6;
 }
+.nav a.active {
+  color: #000;
+  background: #f6f6f6;
+}
 .nav.nav-dark {
   background: #222;
   color: #fff;
@@ -479,6 +514,10 @@ select {
   color: #fff;
 }
 .nav.nav-dark a:hover {
+  color: #fff;
+  background: #444;
+}
+.nav.nav-dark a.active {
   color: #fff;
   background: #444;
 }
@@ -577,7 +616,7 @@ select {
   margin: 12px;
   padding: 0;
   display: inline-block;
-  float: left;
+  float: right;
   font-size: 10pt;
 }
 .selector ul.switch li {
@@ -621,9 +660,9 @@ select {
   background: #fff;
 }
 .selector .filter {
-  position: absolute;
-  top: 12px;
-  left: 12px;
+  display: inline-block;
+  float: left;
+  margin: 12px;
 }
 .selector .filter input[type=text] {
   width: 240px;
@@ -632,6 +671,27 @@ select {
   width: 32px;
   padding: 9px;
   margin-left: 4px;
+}
+
+.sidebar {
+  overflow-y: auto;
+  padding: 16px;
+}
+.sidebar h1 {
+  margin-top: 0;
+  text-align: left;
+}
+.sidebar ul {
+  margin: 8px 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar ul li {
+  margin: 0;
+  padding: 2px;
+}
+.sidebar ul li a {
+  color: #666;
 }
 
 .splash {
@@ -664,7 +724,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: arial, sans-serif;
-  font-size: 10pt;
+  font-size: 14px;
   background: #eee;
 }
 html {
@@ -675,7 +735,7 @@ body {
 }
 h1 {
   font-size: 240%;
-  margin: 0.66em 0 0 0;
+  margin: 0.66em 0 0.66em 0;
   color: #888;
   text-align: center;
 }
@@ -687,7 +747,7 @@ h2 {
 h3 {
   font-size: 120%;
   margin: 0.66em 0;
-  color: #666;
+  color: #888;
 }
 h4 {
   font-size: 100%;
@@ -736,6 +796,10 @@ pre {
   text-align: center;
 }
 .tabs ul li a:hover {
+  background: #eee;
+  color: #000;
+}
+.tabs ul li a.active {
   background: #eee;
   color: #000;
 }

@@ -41,6 +41,16 @@
         }
     }
 
+    .sidebar {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 320px;
+        bottom: 0;
+        background: #fff;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
     .view {
         position: absolute;
         top: 64px; 
@@ -49,6 +59,13 @@
         left: 0;
 
         overflow-y: hidden;
+
+        &.content {
+            padding: 16px 32px;
+            background: #fff;
+            overflow-y: auto;
+        }
+
 
         &.view-scroll {
             overflow-y: scroll;
@@ -62,6 +79,10 @@
             top: 128px;
         }
 
+        &.has-sidebar {
+            left: 320px;
+        }
+
         .empty {
             max-width: 640px;
             margin: 32px auto;
@@ -71,20 +92,30 @@
             font-size: 140%;
         }
 
-        // keep to a useful width
-        .content {
-            max-width: 640px;
+        .wrap {
+            width: 960px;
             margin: 32px auto;
-            padding: 32px;
+            overflow: auto;
 
-            &>h1:first-child {
-                margin-top: 0;
+            .sidebar {
+                display: inline-block;
+                position: relative;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: auto;
+                float: left;
+                width: 312px;
+                box-shadow: none;
             }
 
-            h1 {
-                text-align: center;
+            .panel {
+                margin: 0;
+                display: inline-block;
+                float: right;
             }
         }
+
 
         // put a background on it
         .panel {

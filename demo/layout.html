@@ -18,7 +18,7 @@
   <body>
     <div id="app">
       <header class="nav">
-        <ul><li><a href="index.html">Hubris</a></li><li><a href="layout.html">Layout</a></li><li><a href="views.html">Views</a></li><li><a href="styles.html">Styles</a></li></ul>
+        <ul><li><a href="index.html">Hubris</a></li><li><a href="layout.html" class="active">Layout</a></li><li><a href="views.html">Views</a></li><li><a href="styles.html">Styles</a></li><li><a href="docs.html">Docs</a></li></ul>
         <ul class="session"><li><a href="https://github.com/simonswain/hubris">Github</a></li></ul>
       </header>
       <div class="view view-scroll">
@@ -133,7 +133,6 @@
 
 <h3>View + Header + Tabs + Tray</h3>
 
-
 <div class="screen">
 <div class="screen-header-has-tray"></div>
 <div class="screen-tabs-has-tray"></div>
@@ -149,6 +148,26 @@
   &lt;div class="tabs has-tray"&gt;
   &lt;/div&gt;
   &lt;div class="view has-tray has-tabs"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<hr/>
+
+<h3>Sidebar + View</h3>
+
+<div class="screen">
+<div class="screen-header"></div>
+<div class="screen-sidebar"></div>
+</div>
+<p>Allows for a table of contents and a view</p>
+
+<pre><code>&lt;div id="app"&gt;
+  &lt;header class="nav"&gt;
+  &lt;/header&gt;
+  &lt;div class="sidebar"&gt;
+  &lt;/div&gt;
+  &lt;div class="view has-sidebar"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
