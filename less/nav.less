@@ -1,5 +1,39 @@
 .nav {
-    color: #fff;
+
+    background: #fff;
+    color: #000;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+
+    a {
+        color: #222;
+        &:hover {
+            color: #000;
+            background: #f6f6f6;
+        }
+
+        &.active {
+            color: #000;
+            background: #f6f6f6;
+        }
+    }
+
+    &.nav-dark {
+        background: #222;
+        color: #fff;
+
+        a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+                background: #444;
+            }
+            &.active {
+                color: #fff;
+                background: #444;
+            }
+        }
+
+    }
 
     .top {
         margin: 0;
@@ -10,10 +44,7 @@
         display: block;
         width: 64px;
         height: 64px;
-        background: #69c;
-        &:hover {
-            background: #369;
-        }
+        cursor: pointer;
     }
 
 
@@ -53,20 +84,12 @@
             padding: 0;
             a {
                 display: block;
-                width: 128px;
+                width: 120px;
                 height: 64px;
-                padding: 24px;
-                color: #ccc;
-                background: #222;
+                padding: 24px 4px;
                 text-decoration: none;
                 font-weight: bold;
                 text-align: center;
-                border-left: 1px solid #444;
-                border-right: 1px solid #666;
-                &:hover {
-                    background: #333;
-                    color: #fff;
-                }
             }
         }
     }

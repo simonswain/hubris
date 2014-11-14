@@ -1,14 +1,32 @@
 .dashboard {
 
+    overflow: auto;
+    padding-right: 16px;
+    padding-bottom: 16px;
+
     .widget {
         width: 320px;
         height: 128px;
         background: #fff;
-        margin: 8px;
+        margin: 16px 0 0 16px;
         display: inline-block;
         float: left;
         position: relative;
         box-shadow: 0 0 2px #ddd;
+
+        &.widget-2-1 {
+            width: 656px;
+            height: 128px;
+        }
+
+        &.widget-1-2 {
+            height: 272px;
+        }
+        
+        &.widget-2-2 {
+            width: 656px;
+            height: 272px;
+        }
 
         .icon {
             position: absolute;
@@ -16,44 +34,80 @@
             left: 32px;
             width: 64px;
             height: 64px;
-            background: #ddd;
+            background: #ccc;
             color: #fff;
             border-radius: 50%;
             text-align: center;
             font-size: 24pt;
             padding-top: 16px;
             
-            &.green {
-                background: #090;
+            &.black {
+                background: #000;
+            }
+
+            &.white {
+                background: #fff;
+                color: #888;
             }
 
             &.red {
-                background: #900;
+                background: #c00;
+            }
+
+            &.green {
+                background: #090;
             }
 
             &.blue {
                 background: #69c;
             }
 
-            &.orange {
+            &.yellow {
                 background: #fc0;
+            }
+
+            &.orange {
+                background: #f90;
+            }
+
+            &.cyan {
+                background: #0cc;
+            }
+
+            &.magenta {
+                background: #909;
             }
 
         }
 
         .value {
             position: absolute;
-            top: 16px;
-            left: 128px;
+            top: 24px;
+            left: 120px;
             right: 0;
             font-size: 36pt;
             font-weight: bold;
+            .unit {
+                margin-left: 8px;
+                font-size: 60%;
+            }
+
+
+
+            &.small {
+                top: 32px;
+                font-size: 18pt;
+            }
+            &.medium {
+                top: 32px;
+                font-size: 24pt;
+            }
         }
 
         h3 {
             position: absolute;
             top: 64px;
-            left: 128px;
+            left: 120px;
             right: 0;
             text-align: left;
         }

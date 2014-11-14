@@ -18,10 +18,15 @@
   <body>
     <div id="app">
       <header class="nav">
-        <ul><li><a href="index.html">Hubris</a></li><li><a href="layout.html">Layout</a></li><li><a href="views.html">Views</a></li><li><a href="styles.html">Styles</a></li><li><a href="dataset.html">Dataset</a></li><li><a href="form.html">Form</a></li></ul>
+        <ul><li><a href="index.html">Hubris</a></li><li><a href="layout.html">Layout</a></li><li><a href="views.html" class="active">Views</a></li><li><a href="styles.html">Styles</a></li><li><a href="docs.html">Docs</a></li></ul>
         <ul class="session"><li><a href="https://github.com/simonswain/hubris">Github</a></li></ul>
       </header>
-      <div class="view view-scroll">
+
+      <div class="tabs">
+        <ul><li><a href="splash.html">Splash</a></li><li><a href="content.html">Content</a></li><li><a href="panel.html">Panel</a></li><li><a href="wrap.html">Wrap</a></li><li><a href="empty.html">Empty</a></li><li><a href="dataset.html">Dataset</a></li><li><a href="form.html">Form</a></li><li><a href="dashboard.html">Dashboard</a></li></ul>
+      </div>
+
+      <div class="view has-tabs view-scroll">
 
         <div class="panel">
 
@@ -43,6 +48,12 @@
 
 <h3>Content</h3>
 
+<p>
+Full area of view is given a white background, some padding, and
+permitted to scroll. Intended to be flowed with text content for
+long-form reading
+</p>
+
 <pre><code>&lt;div class="view"&gt;
   &lt;div class="content"&gt;
   &lt;/div&gt;
@@ -57,7 +68,25 @@
 &lt;/div&gt;
 </code></pre>
 
+<h3>Wrap</h3>
+
+<p>
+A <code>.panel</code> with a <code>.sidebar</code>. Both constrained to fit a
+readable width (960px combined max) in the middle of the page.
+Intended for blog or info pages.
+</p>
+
+<pre><code>&lt;div class="view"&gt;
+  &lt;div class="panel"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
 <h3>Empty</h3>
+
+<p>
+For when there is no content to show, e.g no items in database.
+</p>
 
 <pre><code>&lt;div class="view"&gt;
   &lt;div class="empty"&gt;
@@ -82,7 +111,13 @@
 
 <h3>Dataset</h3>
 
-<p>Actions, Selector, Dataset</p>
+<p>
+For a dynamically updated subset of a
+collection. <code>.actions</code> perform tasks on the collection (eg
+create a record) and <code>.selector</code> filters the collection
+(expected to be sourced dynamically from server) to give the visible
+dataset.
+</p>
 
 <pre><code>&lt;div class="view"&gt;
   &lt;div class="actions"&gt;
@@ -97,7 +132,9 @@
 
 <h3>Form</h3>
 
-<p>Actions, Form</p>
+<p>
+<code>.form</code> ensures form elements within it are presented nicely.
+</p>
 
 <pre><code>&lt;div class="view"&gt;
   &lt;div class="actions"&gt;
