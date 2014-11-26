@@ -137,6 +137,7 @@
   bottom: 0;
   background: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-right: 1px solid #eee;
 }
 #app .view {
   position: absolute;
@@ -153,6 +154,10 @@
 }
 #app .view.view-scroll {
   overflow-y: scroll;
+}
+#app .view.view-docs {
+  padding: 0 32px 16px 32px;
+  background: #fff;
 }
 #app .view.has-tray {
   left: 64px;
@@ -531,6 +536,10 @@ select {
   width: 64px;
   height: 64px;
   cursor: pointer;
+  font-size: 2em;
+  color: #999;
+  padding-top: 16px;
+  text-align: center;
 }
 .nav ul {
   list-style: none;
