@@ -1,13 +1,13 @@
 # Hubris
 
-CSS scaffolding for web apps.
+CSS scaffolding for web app frontends.
 
 # Demo
 
 This is a set of static pages that show Hubris in action and detail
 how to use it.
 
-[Hubris demo site](http://simonswain.github.io/hubris/)
+[Hubris demo site](http://simonswain.github.io/hubris)
 
 The source also has a copy of the demo at `demo/index.html`
 
@@ -39,5 +39,6 @@ rendered in to `dist/style.css` and `dist/style.min.css`.
 
 # Release History
 
-* 2014-09-24 0.0.1 First cut      
-* 2014-11-04 0.0.3 Demo      
+* 2014-09-24 0.0.1 First cut
+* 2014-11-04 0.0.3 Demo
+* 2014-11-04 0.0.4 Work in progress
