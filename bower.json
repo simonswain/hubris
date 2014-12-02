@@ -1,10 +1,10 @@
 {
   "name": "hubris",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "authors": [
     "Simon Swain <simon@simonswain.com>"
   ],
-  "description": "Webapp CSS scaffolding",
+  "description": "Webapp UI scaffolding",
   "homepage": "https://github.com/simonswain/hubris",
   "main": [
     "dist/css/style.min.css",
@@ -14,6 +14,7 @@
     "css",
     "less",
     "webapp",
+    "frontend",
     "framework"
   ],
   "license": "MIT",

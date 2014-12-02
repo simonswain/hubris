@@ -1,7 +1,7 @@
 {
   "name": "hubris",
-  "description": "Webapp CSS Scaffolding",
-  "version": "0.0.3",
+  "description": "Webapp UI Scaffolding",
+  "version": "0.0.4",
   "keywords": [
     "css",
     "less"
