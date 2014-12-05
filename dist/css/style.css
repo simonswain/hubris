@@ -379,6 +379,14 @@ button.btn-danger {
 button.btn-danger:hover {
   background: #c00;
 }
+button.btn-off {
+  color: #444;
+  background: #666;
+}
+button.btn-off:hover {
+  color: #fff;
+  background: #999;
+}
 button.btn-small {
   padding: 6px;
   font-size: 10pt;
