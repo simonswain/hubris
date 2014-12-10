@@ -1,50 +1,82 @@
 .dataset {
     position: relative;
-    font-size: 11pt;
-
-    div.holder {
-        height: 0;
-    }
+    font-size: 10pt;
 
     table {
         width: 100%;
+        border-collapse: collapse;
 
-        td, th {
-            color: #666;
-            text-align: left; 
-            border-bottom: 1px solid #ddd;
-            padding: 10px;
- 
-            // -webkit-touch-callout: none;
-            // -webkit-user-select: none;
-            // -khtml-user-select: none;
-            // -moz-user-select: none;
-            // -ms-user-select: none;
-            // user-select: none;
+        tr {
 
-           &.check {
-                width: 32px;
-                text-align: center;
+            &:last-child {
+                td {
+                    border-bottom: none;
+                }
             }
 
-            &.dragger {
-                width: 32px;
-                text-align: center;
+            &.age-0 {
+                background: rgba(255, 255, 0, 1);
+                font-weight: bold;
+                color: #000;
+            }
+            &.age-1 {
+                background: rgba(255, 255, 0, 0.9);
+            }
+            &.age-2 {
+                background: rgba(255, 255, 0, 0.8);
+            }
+            &.age-3 {
+                background: rgba(255, 255, 0, 0.7);
+            }
+            &.age-4 {
+                background: rgba(255, 255, 0, 0.6);
+            }
+            &.age-5 {
+                background: rgba(255, 255, 0, 0.5);
+            }
+            &.age-6 {
+                background: rgba(255, 255, 0, 0.4);
+            }
+            &.age-7 {
+                background: rgba(255, 255, 0, 0.3);
+            }
+            &.age-8 {
+                background: rgba(255, 255, 0, 0.2);
+            }
+            &.age-9 {
+                background: rgba(255, 255, 0, 0.1);
             }
 
-            &.deleter {
-                width: 32px;
-                text-align: center;
-            }
+            td, th {
+                color: #666;
+                text-align: left; 
+                border-bottom: 1px solid #ddd;
+                padding: 10px;
 
-            &.numeric {
-                text-align: right;
-            }
+                &.check {
+                    width: 32px;
+                    text-align: center;
+                }
 
-            &.disabled {
-                color: #aaa;
-            }
+                &.dragger {
+                    width: 32px;
+                    text-align: center;
+                }
 
+                &.deleter {
+                    width: 32px;
+                    text-align: center;
+                }
+
+                &.numeric {
+                    text-align: right;
+                }
+
+                &.disabled {
+                    color: #aaa;
+                }
+
+            }
         }
 
     }
